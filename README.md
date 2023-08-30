@@ -172,8 +172,6 @@ plt.imshow(gray_img, cmap='gray')
 
 
 
-![png](output/output_25_1.png)
-
 
 Now we find the faces in the image with **`detectMultiScale`**. If faces are found, this function returns the positions of detected faces as Rect(x,y,w,h).
 
@@ -214,7 +212,6 @@ plt.imshow(convertToRGB(test1))
 
 
 
-![png](output/output_31_1.png)
 
 
 ### Grouping Code into a Function
@@ -260,7 +257,7 @@ plt.imshow(convertToRGB(faces_detected_img))
 
 
 
-![png](output/output_36_1.png)
+
 
 
 ### `detectMultiScale` Parameter Details
@@ -297,7 +294,7 @@ plt.imshow(convertToRGB(faces_detected_img))
 
 
 
-![png](output/output_39_1.png)
+
 
 
 Well, we got two false positives. What went wrong there? Remember, some faces may be closer to the camera and they would appear bigger than those faces in the back. The scale factor compensates for this so can tweak that parameter. For example, `scaleFactor=1.2` improved the results.
@@ -322,7 +319,6 @@ plt.imshow(convertToRGB(faces_detected_img))
 
 
 
-![png](output/output_41_1.png)
 
 
 So you have to tune these parameters according to information you have about your data.
@@ -355,7 +351,7 @@ plt.imshow(convertToRGB(faces_detected_img))
 
 
 
-![png](output/output_45_1.png)
+
 
 
 Let's try it on another test image. 
@@ -379,7 +375,6 @@ plt.imshow(convertToRGB(faces_detected_img))
 
 
 
-![png](output/output_47_1.png)
 
 
 ## Haar and LBP Results Analysis
@@ -452,7 +447,6 @@ ax2.imshow(convertToRGB(lbp_detected_img))
 
 
 
-![png](output/output_52_1.png)
 
 
 - **Accuracy:** Both `Haar` and `LBP` detected faces successfully.
@@ -511,21 +505,10 @@ ax2.imshow(convertToRGB(lbp_detected_img))
 
 
 
-![png](output/output_55_1.png)
+
 
 
 - **Accuracy:** `Haar` detected more faces and than `LBP`.
 - **Speed:** `LBP` was significantly faster than `Haar`.
-
-## End Notes
-
-As you can see `LBP` is significantly faster than `Haar` and not that much behind in accuracy so depending on the needs of your application you can use any of the above-mentioned face detection algorithms. Try the code and have fun detecting different faces and analyzing the result. And don't forget to thank OpenCV for giving the implementation of the above-mentioned algorithms.
-
-Face detection has rich real-time applications that include facial recognition, emotions detection (smile detection), facial features detection (like eyes), face tracking etc. You can also explore more exciting machine learning and computer vision algorithms available in OpenCV library.  
-
-You can download the complete code from this [repo](https://github.com/informramiz/Face-Detection-OpenCV) along with test images and LBP and Haar training files. 
-
-
-```python
 
 ```
